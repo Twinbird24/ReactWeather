@@ -1,5 +1,21 @@
+var webpack = require('webpack');
+
 module.exports = {
-  entry: './app/app.jsx',
+  entry: [
+    'script!jquery/dist/jquery.min.js', //sciprt! makes sure files are packaged for webpack
+    'script!foundation-sites/dist/foundation.min.js',
+    './app/app.jsx'
+  ],
+  externals: {
+    jquery: 'jQuery' // key is module name, value is var name we want availabe in our external script files, this way foundation can properly attach its methods to jQuery object
+  },
+  plugins: [
+    // so we don't have to require jquery on every page, if we use these key words, the jquery module will be automatically required
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    })
+  ],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
