@@ -4,10 +4,13 @@ var WeatherForm = React.createClass({
   onFormSubmit: function (e) {
     e.preventDefault();
 
+    // take what the user inputted
     var location = this.refs.location.value;
 
     if (location.length > 0) {
+      // empty input field
       this.refs.location.value = '';
+      // run the onSearch function inside of the parent component
       this.props.onSearch(location);
     }
   },
@@ -16,7 +19,7 @@ var WeatherForm = React.createClass({
         <div>
           <form onSubmit={this.onFormSubmit}>
             <input type="text" ref="location"/>
-            <button>Get Weather</button>
+            <button className="button expanded hollow">Get Weather</button>
           </form>
         </div>
     );

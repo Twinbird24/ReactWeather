@@ -13,13 +13,13 @@ var About = (props) => {
       </p>
       <ul>
         <li>
-          <a herf="https://facebook.github.io/react" target="_blank">React</a> - the JavaScript framework
+          <a href="https://facebook.github.io/react/" target="_blank">React</a> - the JavaScript framework
         </li>
         <li>
-          <a herf="http://openweathermap.org" target="_blank">Open Weather Map</a> - the website used for weather data
+          <a href="http://openweathermap.org" target="_blank">Open Weather Map</a> - the website used for weather data
         </li>
         <li>
-          <a herf="https://github.com/Twinbird24/ReactWeather" target="_blank">GitHub</a> - view the code on GitHub
+          <a href="https://github.com/Twinbird24/ReactWeather" target="_blank">GitHub</a> - view the code on GitHub
         </li>
       </ul>
     </div>
