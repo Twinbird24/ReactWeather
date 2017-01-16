@@ -1,3 +1,4 @@
+// the webpack variable is used in the plugins array. We use webpack.ProvidePlugin to configure jQuery.
 var webpack = require('webpack');
 
 module.exports = {
@@ -31,7 +32,8 @@ module.exports = {
       About: 'app/components/About.jsx',
       Examples: 'app/components/Examples.jsx',
       openWeatherMap: 'app/api/openWeatherMap.jsx',
-      ErrorModal: 'app/components/ErrorModal.jsx'
+      ErrorModal: 'app/components/ErrorModal.jsx',
+      applicationStyles: 'app/styles/app.css'
     },
     extensions: ['', '.js', '.jsx']
   },

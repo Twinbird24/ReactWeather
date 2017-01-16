@@ -12,6 +12,9 @@ require('style!css!foundation-sites/dist/foundation.min.css');
 // fire up foundation, by calling the foundation method
 $('document').foundation();
 
+// app css
+require('style!css!applicationStyles')
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
